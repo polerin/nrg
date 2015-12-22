@@ -81,5 +81,5 @@ test:
 production:
   <<: *default
   database: nrg_production
-  username: nrg
+  username: deploy
   password: <%= ENV['NRG_DATABASE_PASSWORD'] %>

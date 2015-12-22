@@ -22,6 +22,7 @@ namespace :deploy do
        ' code and kill the old process when done.'
   task :restart do
     run :rake, 'assets:precompile'
+    run :rake, 'db:migrate'
     run 'sudo service unicorn_nrg restart'
   end
 
