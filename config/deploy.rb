@@ -18,13 +18,14 @@ namespace :deploy do
     run 'sudo service unicorn_nrg start'
   end
 
-  desc "Initiate a rolling restart by telling Unicorn to start the new application code and kill the old process when done."
+  desc 'Initiate a rolling restart by telling Unicorn to start the new application' \
+       ' code and kill the old process when done.'
   task :restart do
     run :rake, 'assets:precompile'
     run 'sudo service unicorn_nrg restart'
   end
 
-  desc "Stop the application by killing the Unicorn process"
+  desc 'Stop the application by killing the Unicorn process'
   task :stop do
     run 'sudo service unicorn_nrg stop'
   end
