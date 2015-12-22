@@ -1,0 +1,14 @@
+AllCops:
+  Exclude:
+    - bin/*
+    - vendor/**/*
+    - node_modules/**/*
+    - db/schema.rb
+    - db/migrate/*
+    - Gemfile
+    - Gemfile.lock
+Documentation:
+  Enabled: false
+
+LineLength:
+  Max: 90
