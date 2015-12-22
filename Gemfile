@@ -10,14 +10,26 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 gem 'turbolinks'
 gem 'uglifier', '>= 1.3.0'
 gem 'unicorn'
+gem 'dotenv'
 
 group :development, :test do
-  gem 'byebug'
+  gem 'awesome_print'
+  gem 'better_errors'
+  gem 'binding_of_caller'
   gem 'capistrano-bundler', '>= 1.1.0'
   gem 'capistrano-rails'
   gem 'capistrano-rvm'
-  gem 'dotenv'
+  gem 'pry'
+  gem 'pry-nav'
+  gem 'rspec-its'
+  gem 'rspec-rails'
   gem 'spring'
   gem 'web-console', '~> 2.0'
 end
 
+group :test do
+  gem 'capybara'
+  gem 'factory_girl_rails'
+  gem 'faker'
+  gem 'rubocop', require: false
+end
