@@ -15,17 +15,17 @@ after 'deploy:restart', 'deploy:cleanup'
 namespace :deploy do
   desc 'Start the Unicorn process when it isn\'t already running.'
   task :start do
-    run "cd #{current_path} && #{current_path}/bin/unicorn -Dc #{shared_path}/config/unicorn.rb -E #{rails_env}"
+    run 'sudo service unicorn_nrg start'
   end
 
   desc "Initiate a rolling restart by telling Unicorn to start the new application code and kill the old process when done."
   task :restart do
     run :rake, 'assets:precompile'
-    run "kill -USR2 $(cat #{shared_path}/pids/unicorn.pid)"
+    run 'sudo service unicorn_nrg restart'
   end
 
   desc "Stop the application by killing the Unicorn process"
   task :stop do
-    run "kill $(cat #{shared_path}/pids/unicorn.pid)"
+    run 'sudo service unicorn_nrg stop'
   end
 end
