@@ -1,0 +1,9 @@
+h2
+  | Events
+  = casein_pagination_details @events
+= render :partial => 'casein/events/table', :locals => { :events => @events }
+.text-center
+  = will_paginate @events
+= content_for :sidebar do
+  li
+    = link_to "#{casein_show_icon "plus-sign"}Add a new event".html_safe, new_casein_event_path

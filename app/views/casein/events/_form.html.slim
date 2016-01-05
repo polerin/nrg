@@ -1,0 +1,29 @@
+.row
+  .col-lg-6
+    = casein_text_field f, f.object, :type
+  .col-lg-6
+    = casein_date_select f, f.object, :start_date
+.row
+  .col-lg-6
+    = casein_date_select f, f.object, :end_date
+  .col-lg-6
+    = casein_text_area f, f.object, :description
+.row
+  .col-lg-6
+    = casein_check_box f, f.object, :is_published
+  .col-lg-6
+    = casein_text_field f, f.object, :recap_url
+.row
+  .col-lg-6
+    = casein_text_field f, f.object, :home_team_a
+  .col-lg-6
+    = casein_text_field f, f.object, :home_team_b
+.row
+  .col-lg-6
+    = casein_text_field f, f.object, :visiting_team_a
+  .col-lg-6
+    = casein_text_field f, f.object, :visiting_team_b
+.row
+  .col-lg-6
+    = casein_text_field f, f.object, :ticket_url
+  .col-lg-6
