@@ -21,6 +21,7 @@ group :development, :test do
   gem 'capistrano-bundler', '>= 1.1.0'
   gem 'capistrano-rails'
   gem 'capistrano-rvm'
+  gem 'capistrano-service'
   gem 'pry'
   gem 'pry-nav'
   gem 'rspec-its'
