@@ -1,0 +1,7 @@
+toolbar:
+  - formatselect removeformat | bold italic underline | alignleft aligncenter alignright | bullist numlist | link image
+  - undo redo | cut copy paste
+menubar: false
+plugins:
+  - image
+  - link
