@@ -14,6 +14,7 @@ gem 'tinymce-rails', git: 'git@github.com:spohlenz/tinymce-rails.git'
 gem 'turbolinks'
 gem 'uglifier', '>= 1.3.0'
 gem 'unicorn'
+gem 'neat'
 
 group :development, :test do
   gem 'awesome_print'
