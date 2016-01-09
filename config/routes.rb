@@ -10,6 +10,8 @@ Rails.application.routes.draw do
   # You can have the root of your site routed with "root"
   root 'application#index'
 
+  resources :events, only: [:index, :show]
+
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
 
