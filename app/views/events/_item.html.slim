@@ -1,0 +1,17 @@
+.event
+  .date
+    | date: 
+    span.date = event.start_date
+  .description == event.description
+  .teams
+    .match.first
+      .team.home: .name = event.home_team_b
+      .team.away: .name = event.visiting_team_b
+    .match.second
+      .team.home: .name = event.home_team_a
+      .team.away: .name = event.visiting_team_a
+
+  - if !event.recap_url.empty?
+    .recap: a href= event.recap_url Recap
+  - if !event.ticket_url.empty?
+    .tickets: a href=event.ticket_url Buy tickets
